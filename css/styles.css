@@ -685,11 +685,11 @@ ul {
     fill: var(--primary-text-color);
 }
 
-/* .is-hidden {
+.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-} */
+}
 
 .modal-title {
     font-weight: 700;
@@ -703,11 +703,9 @@ ul {
 
 .modal-form {
     margin-top: 12px;
-    /* cursor: pointer; */
 }
 
 .name-label {
-    /* margin-bottom: 4px; */
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
@@ -722,8 +720,6 @@ ul {
 }
 
 .input {
-    /* position: relative; */
-    /* display: block; */
     background-color: transparent;
     width: 100%;
     height: 40px;
@@ -782,10 +778,6 @@ ul {
 
 }
 
-/* .checkbox-input {
-    
-} */
-
 .checkbox-text {
     display: flex;
     justify-content: center;
@@ -797,22 +789,54 @@ ul {
 }
 
 .checkbox-text span {
+    position: relative;
     display: flex;
     margin-right: 8px;
-    height: 100%;
 }
 
 .checkbox-svg {
-    width: 16px;
-    height: 15px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
+
+.checkbox-svg-checked {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+}
+
+
 
 .checkbox-link {
     margin-left: 5px;
     color: var(--accent-color);
 }
 
+.checkbox-input:checked + .checkbox-text span  {
+    background-color: var(--accent-color);
+    fill: var(--accent-color);
+}
+
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+
+.checkbox-svg-checked {
+    fill: var(--white-text-color);
+}
 
 .send-btn {
     font-family: Roboto;
