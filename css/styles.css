@@ -769,7 +769,6 @@ ul {
 
 .textarea-wrap {
     margin-top: 4px;
-    /* display: block; */
 }
 
 .form-checkbox {
@@ -807,8 +806,6 @@ ul {
     right: 25%;
 }
 
-
-
 .checkbox-link {
     margin-left: 5px;
     color: var(--accent-color);
@@ -819,20 +816,18 @@ ul {
     fill: var(--accent-color);
 }
 
-
 .visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
-
 
 .checkbox-svg-checked {
     fill: var(--white-text-color);
