@@ -498,6 +498,7 @@ ul {
 .footer-container {
     display: flex;
     align-items: baseline;
+    /* outline: 2px dotted red; */
 }
 .left-footer {
     margin-right: 70px;
@@ -578,6 +579,58 @@ ul {
     background-color: var(--accent-color);
 }
 
+/* -------- ФОРМА ФУТЕРА -------- */
+
+.footer-form-div {
+    margin-left: 93px;
+}
+
+.footer-form {
+    margin-top: 20px;
+    display: flex;
+}
+
+
+.footer-form-input {
+    width: 353px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 0 16px;
+}
+
+.footer-form-bnt {
+    background-color: var(--accent-color);
+    color: var(--white-text-color);
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 28px;
+    margin-left: 12px;
+
+    /* font-family: Roboto; */
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    outline: none;
+}
+
+.send-svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--white-text-color);
+    margin-left: 10px;
+}
+
 /*  ============== MODAL ============== */
 
 .backdrop {
@@ -602,6 +655,8 @@ ul {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
+    padding: 40px;
 }
 
 .close-btn {
@@ -614,19 +669,174 @@ ul {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.close-btn:hover .close-svg {
+    fill: var(--accent-color);
 }
 
 .close-svg {
     width: 18px;
     height: 18px;
     position: absolute;
+    fill: var(--primary-text-color);
 }
 
-.is-hidden {
+/* .is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+} */
+
+.modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-text-color);
 }
+
+.modal-form {
+    margin-top: 12px;
+    /* cursor: pointer; */
+}
+
+.name-label {
+    /* margin-bottom: 4px; */
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--p-text-color);
+}
+
+.input-wrap {
+    position: relative;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.input {
+    /* position: relative; */
+    /* display: block; */
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    padding-left: 42px;
+}
+
+.input:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.input:focus + .name-svg {
+    fill: var(--accent-color);
+}
+
+.name-svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+}
+
+.user-comment {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    background-color: transparent;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.user-comment::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.textarea-wrap {
+    margin-top: 4px;
+    /* display: block; */
+}
+
+.form-checkbox {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+/* .checkbox-input {
+    
+} */
+
+.checkbox-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--p-text-color);
+}
+
+.checkbox-text span {
+    display: flex;
+    margin-right: 8px;
+    height: 100%;
+}
+
+.checkbox-svg {
+    width: 16px;
+    height: 15px;
+
+}
+
+.checkbox-link {
+    margin-left: 5px;
+    color: var(--accent-color);
+}
+
+
+.send-btn {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: var(--white-text-color);
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    min-width: 200px;
+}
+
 
 /* =============== PORTFOLIO ============== */
 
